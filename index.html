@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pollito Feliz Cumpleaños</title>
+  <style>
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #c6e2ff;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      position: relative;
+      width: 500px;
+      height: 700px;
+
+      background-color: #ffe97d;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInCard 2s ease-out forwards;
+    }
+
+    @keyframes fadeInCard {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #mensaje {
+      font-size: 30px;
+      margin: 30px 0;
+      text-align: center;
+      font-style: italic;
+      color: #000000;
+    }
+
+    #imagen {
+      max-width: 312.5px;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+
+    #mensajeAdicional {
+      font-size: 24px;
+      text-align: center;
+      font-style: italic;
+      color: #000000;
+      margin-top: 20px;
+    }
+
+    #gifContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50%;
+    }
+
+    #gif {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      z-index: -1;
+      background-color: transparent;
+      background-image: url('Fondo.jpg');
+      animation: moveBackground 60s linear infinite;
+    }
+
+    @keyframes moveBackground {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <h1 id="mensaje">Pollito feliz cumpleaños!</h1>
+      <img id="imagen" src="DBD.jpg" alt="Imagen de cumpleaños" />
+      <p id="mensajeAdicional">Beso de tres!!</p>
+      <div id="gifContainer">
+        <img id="gif" src="Animacion.gif" alt="GIF" />
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
